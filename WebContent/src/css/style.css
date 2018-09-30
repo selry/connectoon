@@ -1,0 +1,1059 @@
+@charset "EUC-KR";
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+.blind {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 12px;
+  font-family: NanumGothic, "³ª´®°íµñ", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin: 10px;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+a {
+  margin: 0;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  font-family: "³ª´®°íµñ", NanumGothic, sans-serif;
+}
+
+input {
+  font-family: "³ª´®°íµñ", NanumGothic, sans-serif;
+}
+
+img {
+  vertical-align: top;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.btn_favorite {
+  width: 20px;
+  height: 20px;
+}
+
+.custom_select .btn_align, .custom_select .align_list .btn_view,
+.custom_select .align_list .btn_new,
+.custom_select .align_list .btn_name {
+  background-color: #fff;
+  color: #12314b;
+}
+
+.btn_login, .btn_send, .btn_sign,
+.btn_find,
+.btn_reset, .btn_edit_favorite, .webtoon_list.grid .webtoon_link, .webtoon_list .item_order, .nav_link {
+  background-color: #12314b;
+  color: #fff;
+}
+
+body {
+  font-size: 12px;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.wrap {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
+}
+
+.title {
+  font-size: 26px;
+}
+@media screen and (min-width: 1024px) {
+  .title {
+    font-size: 52px;
+  }
+}
+
+.nav_list {
+  font-size: 0;
+}
+.nav_item {
+  display: inline-block;
+  width: 25%;
+  height: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .nav_item {
+    width: 10%;
+    height: 60px;
+  }
+  .nav_item:nth-child(4) {
+    display: none;
+  }
+}
+.nav_search {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .nav_search {
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+  }
+}
+.nav_link {
+  display: block;
+  height: 100%;
+  padding: 0;
+  font-size: 14px;
+}
+.nav_link:after {
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+@media screen and (min-width: 1024px) {
+  .nav_link {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section .search {
+    display: none;
+  }
+}
+
+.search {
+  display: block;
+  padding: 0 10px 10px;
+  background-color: #12314b;
+}
+@media screen and (min-width: 1024px) {
+  .search {
+    padding-top: 10px;
+  }
+}
+.search_label {
+  display: block;
+  position: relative;
+}
+.search_input {
+  padding: 0 30px 0 5px;
+  width: 100%;
+  height: 30px;
+  border: 0;
+  box-sizing: border-box;
+}
+.search_input::placeholder {
+  font-size: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .search_input::placeholder {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .search_input {
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .webtoon_category {
+    width: 30%;
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+.list_category .type, .list_category .content {
+  font-size: 0;
+  margin-top: 5px;
+}
+.list_category .type_item, .list_category .content_item {
+  position: relative;
+  display: inline-block;
+  width: 33.3333333333%;
+  height: 39px;
+  color: #fff;
+  font-size: 12px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+}
+.list_category .type_item:nth-child(3n), .list_category .content_item:nth-child(3n) {
+  border-right: 0;
+}
+@media screen and (min-width: 1024px) {
+  .list_category .type_item, .list_category .content_item {
+    font-size: 18px;
+    height: 59px;
+  }
+}
+.list_category .category_label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #12314b;
+}
+.list_category .category_label:after {
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+.list_category .category_input:checked ~ .category_label {
+  background-color: #539ad6;
+}
+.list_category .btn_search_category {
+  width: 33.3333333333%;
+  height: 39px;
+  font-size: 12px;
+  vertical-align: top;
+  background-color: #f2fc86;
+  border-bottom: 1px solid #fff;
+}
+@media screen and (min-width: 1024px) {
+  .list_category .btn_search_category {
+    height: 59px;
+    font-size: 16px;
+  }
+}
+.list_category .content_item {
+  width: 33.3333333333%;
+}
+
+@media screen and (min-width: 1024px) {
+  .webtoon_wrap {
+    overflow: auto;
+  }
+}
+
+.best_webtoon {
+  position: absolute;
+  top: 250px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+}
+@media screen and (min-width: 1024px) {
+  .best_webtoon {
+    position: relative;
+    float: left;
+    top: 0;
+    width: 50%;
+    overflow: visible;
+    margin-right: 20px;
+  }
+  .best_webtoon:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    bottom: 0;
+    width: 1px;
+    background-color: #1c4c74;
+  }
+}
+.best_webtoon tr {
+  height: 40px;
+  border-bottom: 1px solid #1c4c74;
+}
+@media screen and (min-width: 1024px) {
+  .best_webtoon tr {
+    height: 50px;
+  }
+}
+.best_webtoon tr:nth-child(n+6) {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .best_webtoon tr:nth-child(n+6) {
+    display: table-row;
+  }
+}
+.best_webtoon td {
+  color: #1c4c74;
+}
+.best_webtoon .col1,
+.best_webtoon .col4 {
+  width: 15%;
+}
+
+.new_webtoon {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .new_webtoon {
+    display: block;
+    overflow: hidden;
+  }
+}
+.new_webtoon tr {
+  height: 40px;
+  border-bottom: 1px solid #1c4c74;
+}
+@media screen and (min-width: 1024px) {
+  .new_webtoon tr {
+    height: 50px;
+  }
+}
+.new_webtoon tr:nth-child(n+6) {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .new_webtoon tr:nth-child(n+6) {
+    display: table-row;
+  }
+}
+.new_webtoon td {
+  color: #1c4c74;
+}
+.new_webtoon .col1,
+.new_webtoon .col4 {
+  width: 15%;
+}
+
+.edit {
+  margin-top: 10px;
+}
+.edit_favorite {
+  overflow: hidden;
+  margin-right: 10px;
+}
+.edit:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.view {
+  margin-top: 10px;
+  text-align: right;
+}
+.view:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.list_wrap {
+  position: absolute;
+  top: 91px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+}
+@media screen and (min-width: 1024px) {
+  .list_wrap {
+    top: 61px;
+  }
+}
+
+.webtoon_list .webtoon_item {
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .webtoon_list .webtoon_item {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+  }
+}
+.webtoon_list .webtoon_link {
+  display: block;
+}
+.webtoon_list .item_img {
+  position: relative;
+}
+.webtoon_list .item_order {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.webtoon_list .item_order:after {
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+.webtoon_list .item_title:after {
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+.webtoon_list .item_delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.webtoon_list .btn_delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../img/icon-delete.png") #fff no-repeat center center;
+  background-size: 20px auto;
+  border: 1px solid #12314b;
+}
+.webtoon_list.grid {
+  text-align: left;
+  font-size: 0;
+}
+.webtoon_list.grid .webtoon_item {
+  display: inline-block;
+  width: 50%;
+}
+.webtoon_list.grid .webtoon_item:nth-child(odd) {
+  position: relative;
+}
+.webtoon_list.grid .webtoon_item:nth-child(odd):after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #12314b;
+}
+.webtoon_list.grid .webtoon_item:nth-child(-n+2) .btn_delete {
+  border-width: 1px 0 1px 1px;
+}
+@media screen and (min-width: 1024px) {
+  .webtoon_list.grid .webtoon_item {
+    position: relative;
+    width: 25%;
+  }
+  .webtoon_list.grid .webtoon_item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #12314b;
+  }
+}
+.webtoon_list.grid .item_img img {
+  width: 100%;
+  height: 100%;
+}
+.webtoon_list.grid .item_order {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .webtoon_list.grid .item_order {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+}
+.webtoon_list.grid .item_title {
+  font-size: 12px;
+  height: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .webtoon_list.grid .item_title {
+    font-size: 18px;
+    height: 40px;
+  }
+}
+.webtoon_list.grid .item_delete {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+}
+.webtoon_list.grid .btn_delete {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  background-size: 20px auto;
+  border-width: 0 0 1px 1px;
+}
+@media screen and (min-width: 1024px) {
+  .webtoon_list.list {
+    border-top: 1px solid #12314b;
+    text-align: left;
+  }
+}
+.webtoon_list.list .webtoon_item {
+  border-bottom: 1px solid #12314b;
+}
+.webtoon_list.list .webtoon_item:first-child {
+  border-top: 1px solid #12314b;
+}
+@media screen and (min-width: 1024px) {
+  .webtoon_list.list .webtoon_item {
+    margin-right: -4px;
+  }
+  .webtoon_list.list .webtoon_item:first-child {
+    border-top: 0;
+  }
+}
+.webtoon_list.list .webtoon_link {
+  color: #12314b;
+}
+.webtoon_list.list .webtoon_inner_list:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.webtoon_list.list .item_img {
+  float: left;
+  border-right: 1px solid #12314b;
+}
+.webtoon_list.list .item_order {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  top: -1px;
+}
+.webtoon_list.list .item_title {
+  overflow: hidden;
+  height: 100px;
+  font-size: 14px;
+}
+.webtoon_list.list .item_delete {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+}
+.webtoon_list.list .btn_delete {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  border-width: 0 0 1px 1px;
+}
+
+.config_table .col1 {
+  background-color: #a5caea;
+}
+.config_table .col2 {
+  background-color: #cfe3f3;
+}
+.config_table tr {
+  height: 40px;
+}
+.config_table .notice_link {
+  display: block;
+  color: #12314b;
+  background-color: #cfe3f3;
+  height: 40px;
+}
+.config_table .notice_link:after {
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+@media screen and (min-width: 1024px) {
+  .config_table .notice_link {
+    height: 60px;
+  }
+}
+
+.form_wrap {
+  margin-top: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .form_wrap {
+    margin-top: 0;
+  }
+}
+.form_wrap .fieldset {
+  padding: 20px;
+  border: 0;
+}
+@media screen and (min-width: 1024px) {
+  .form_wrap .fieldset {
+    padding: 30px 200px;
+  }
+}
+.form_wrap .inner_wrap {
+  margin-top: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .form_wrap .inner_wrap {
+    margin-top: 30px;
+  }
+}
+.form_wrap .input_wrap {
+  overflow: hidden;
+}
+.form_wrap .form_label {
+  float: left;
+  width: 60px;
+  height: 30px;
+  color: #12314b;
+  font-size: 14px;
+}
+.form_wrap .form_label:after {
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+@media screen and (min-width: 1024px) {
+  .form_wrap .form_label {
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+.form_wrap .form_input {
+  padding: 0 5px;
+  width: 100%;
+  height: 30px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #12314b;
+  box-sizing: border-box;
+}
+.form_wrap .form_input::placeholder {
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .form_wrap .form_input {
+    height: 40px;
+  }
+}
+.form_wrap .custom_label {
+  margin-top: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .form_wrap .custom_label {
+    margin-top: 20px;
+  }
+}
+.form_wrap .sign_form .custom_label {
+  width: 90px;
+}
+@media screen and (min-width: 1024px) {
+  .form_wrap .sign_form .custom_label {
+    width: 141px;
+  }
+}
+.form_wrap .btn_wrap {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.section_title {
+  font-size: 17px;
+  color: #12314b;
+}
+@media screen and (min-width: 1024px) {
+  .section_title {
+    font-size: 22px;
+  }
+}
+
+.section {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .section {
+    top: 140px;
+  }
+}
+.section .popular_list,
+.section .recent_list {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  overflow-y: scroll;
+}
+@media screen and (min-width: 1024px) {
+  .section .popular_list,
+.section .recent_list {
+    top: 40px;
+    bottom: 40px;
+  }
+}
+.section .popular_list .search_item,
+.section .recent_list .search_item {
+  height: 30px;
+  border-bottom: 1px solid #a5caea;
+}
+.section .popular_list .search_item:after,
+.section .recent_list .search_item:after {
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.btn_search {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/icon-search.png") no-repeat center center;
+  background-size: 20px auto;
+  outline: 0;
+}
+@media screen and (min-width: 1024px) {
+  .btn_search {
+    width: 30px;
+    height: 30px;
+    background-size: 30px auto;
+  }
+}
+
+.btn_favorite {
+  background: url("../img/icon-like.png") no-repeat center center;
+  background-size: 20px auto;
+  outline: 0;
+}
+@media screen and (min-width: 1024px) {
+  .btn_favorite {
+    width: 30px;
+    height: 30px;
+    background-size: 30px auto;
+  }
+}
+
+.btn_goback {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: url("../img/icon-back.png") no-repeat center center;
+  background-size: 20px auto;
+}
+@media screen and (min-width: 1024px) {
+  .btn_goback {
+    display: none;
+  }
+}
+
+.btn_edit_favorite {
+  width: 100%;
+  height: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .btn_edit_favorite {
+    height: 40px;
+    background-size: 40px auto;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .edit_favorite {
+    display: none;
+  }
+}
+
+.view .btn_edit_favorite {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .view .btn_edit_favorite {
+    width: 80px;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.btn_list, .btn_grid {
+  width: 30px;
+  height: 30px;
+  background: url("../img/icon-list.png") no-repeat center center;
+  background-size: 20px auto;
+  border: 1px solid #12314b;
+  margin-right: -4px;
+}
+@media screen and (min-width: 1024px) {
+  .btn_list, .btn_grid {
+    width: 40px;
+    height: 40px;
+    background-size: 40px auto;
+    margin-right: -6px;
+  }
+}
+
+.btn_grid {
+  background: url("../img/icon-grid.png") no-repeat center center;
+  background-size: 20px auto;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .btn_grid {
+    width: 40px;
+    height: 40px;
+    background-size: 40px auto;
+  }
+}
+
+.btn_notice {
+  background-color: #a5caea;
+  width: 100%;
+  height: 40px;
+  font-size: 12px;
+  border: 0;
+  outline: 0;
+}
+@media screen and (min-width: 1024px) {
+  .btn_notice {
+    height: 60px;
+    font-size: 18px;
+  }
+}
+
+.btn_login, .btn_send, .btn_sign,
+.btn_find,
+.btn_reset {
+  width: 90px;
+  height: 30px;
+  font-size: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .btn_login, .btn_send, .btn_sign,
+.btn_find,
+.btn_reset {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+.btn_sign,
+.btn_find {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+.btn_sign:after,
+.btn_find:after {
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.btn_send {
+  width: 120px;
+}
+
+.btn_recent, .btn_clear, .btn_popular {
+  width: 50%;
+  height: 30px;
+  margin-right: -4px;
+  background-color: #7cb2e0;
+  font-size: 12px;
+  outline: 0;
+}
+@media screen and (min-width: 1024px) {
+  .btn_recent, .btn_clear, .btn_popular {
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+.btn_popular {
+  border-right: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.btn_clear {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.custom_label {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+}
+.custom_label:after {
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.custom_input {
+  visibility: hidden;
+  margin: 0 20px 0 0;
+}
+.custom_input.checked ~ .custom_check {
+  background-color: #12314b;
+}
+.custom_input.checked ~ .custom_check:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.custom_check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #12314b;
+  box-sizing: border-box;
+}
+
+.custom_select {
+  position: relative;
+  float: left;
+  margin-left: 10px;
+  width: 90px;
+  height: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .custom_select {
+    width: 120px;
+    height: 40px;
+  }
+}
+.custom_select .align_list {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #12314b;
+}
+@media screen and (min-width: 1024px) {
+  .custom_select .align_list {
+    top: 40px;
+  }
+}
+.custom_select .align_list .btn_view,
+.custom_select .align_list .btn_new,
+.custom_select .align_list .btn_name {
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  outline: 0;
+}
+.custom_select .align_list.hidden ~ .btn_align:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 0 0 -1px 10px;
+  border-style: solid;
+  border-width: 6px 4px 0;
+  border-color: #12314b transparent transparent transparent;
+}
+@media screen and (min-width: 1024px) {
+  .custom_select .align_list.hidden ~ .btn_align:after {
+    border-width: 8px 6px 0;
+  }
+}
+.custom_select .btn_align {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 30px;
+  font-size: 12px;
+  border-bottom: 1px solid #12314b;
+  outline: 0;
+}
+@media screen and (min-width: 1024px) {
+  .custom_select .btn_align {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+.custom_select .btn_align:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 0 0 -1px 10px;
+  border-style: solid;
+  border-width: 0 4px 6px;
+  border-color: transparent transparent #12314b transparent;
+}
+@media screen and (min-width: 1024px) {
+  .custom_select .btn_align:after {
+    border-width: 0 6px 8px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
