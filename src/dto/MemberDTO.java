@@ -3,7 +3,7 @@ package dto;
 public class MemberDTO {
 	private String id;
 	private String password;
-	private String age;
+	private int age;
 	
 	public MemberDTO(){}
 	
@@ -15,11 +15,11 @@ public class MemberDTO {
 		this.password = password;
 	}
 
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 
@@ -27,7 +27,7 @@ public class MemberDTO {
 		this.id = id;
 	}
 
-	public MemberDTO(String id, String password, String age) {
+	public MemberDTO(String id, String password, int age) {
 		this.id = id;
 		this.password = password;
 		this.age = age;

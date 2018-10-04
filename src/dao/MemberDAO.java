@@ -2,6 +2,8 @@ package dao;
 
 import java.sql.*;
 
+import dto.MemberDTO;
+
 public class MemberDAO {
 	   private static MemberDAO dao = new MemberDAO();
 	   private MemberDAO() {}
@@ -14,7 +16,7 @@ public class MemberDAO {
 	      Connection conn = null;
 	      try {
 	         Class.forName("com.mysql.jdbc.Driver");
-	         String url = "jdbc:mysql://localhost:3306/project";
+	         String url = "jdbc:mysql://localhost:3306/webtoon";
 	         String user = "root";
 	         String password = "100400";
 	         conn = DriverManager.getConnection(url, user, password);
@@ -69,5 +71,42 @@ public class MemberDAO {
 	         }
 	      }
 	   }
+
+	public void memberJoin(MemberDTO member) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		try {
+			conn = connect();
+			pstmt = conn.prepareStatement("insert into member values(?,?,?);");
+			pstmt.setString(1, member.getId());
+			pstmt.setString(2, member.getPassword());
+			pstmt.setInt(3, member.getAge());
+			pstmt.executeUpdate();
+		}catch(Exception e) {
+			System.out.println("memberJoin() 오류!" +e);
+		}finally {
+			close(conn,pstmt);
+		}
+	}
+
+	public String memberLogin(String id) {
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		String db_password = null;
+		try {
+			conn = connect();
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery("select password from member where id = '"+id+"';");
+			while(rs.next()) {
+				db_password = rs.getString(1);
+			}
+		}catch(Exception e) {
+			System.out.println("memberLogin() 오류!" +e);
+		}finally {
+			close(conn,stmt);
+		}
+		return db_password;
+	}
 
 }

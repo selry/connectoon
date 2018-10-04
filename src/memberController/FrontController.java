@@ -14,7 +14,8 @@ public class FrontController extends HttpServlet{
       
       list = new HashMap<String, Controller>();
       list.put("/memberJoin.do", new MemberJoinController());
-      
+      list.put("/memberLogin.do", new MemberLoginController());
+      list.put("/memberLogout.do", new MemberLogoutController());
       }
       
    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -16,7 +16,8 @@
                 <ul class="nav_list">
                     <li class="nav_item"><a href="index.jsp" class="nav_link">홈</a></li>
                     <li class="nav_item"><a href="favorite.jsp" class="nav_link">즐겨찾기</a></li>
-                    <li class="nav_item"><a href="login.jsp" class="nav_link">로그인</a></li>
+                   <% if(session.getAttribute("login_user")==null){ %>  <li class="nav_item"><a href="login.jsp" class="nav_link">로그인</a></li><%}
+                   else{%>  <li class="nav_item"><a href="memberLogout.do" class="nav_link">로그아웃</a></li><%} %>
                     <li class="nav_item"><a href="config.jsp" class="nav_link">설정</a></li>
                     <li class="nav_search">
                         <search class="search">

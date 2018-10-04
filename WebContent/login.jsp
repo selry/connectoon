@@ -36,19 +36,19 @@
         </header>
         <section class="section">
             <div class="form_wrap">
-                <form name="login_form" class="login_form">
+                <form name="login_form" action="memberLogin.do" method="POST" class="login_form">
                     <fieldset class="fieldset">
                         <legend class="blind">로그인 정보</legend>
                         <div class="inner_wrap">
                             <label for="id" class="form_label">아이디</label>
                             <div class="input_wrap">
-                                <input type="text" id="id" class="form_input">
+                                <input type="text" name="input_id" id="id" class="form_input">
                             </div>
                         </div>
                         <div class="inner_wrap">
                             <label for="pw" class="form_label">비밀번호</label>
                             <div class="input_wrap">
-                                <input type="password" id="pw" class="form_input">
+                                <input type="password" name="input_password" id="pw" class="form_input">
                             </div>
                             <label for="pw_show" class="custom_label">
                                 <input type="checkbox" id="pw_show" class="custom_input">
